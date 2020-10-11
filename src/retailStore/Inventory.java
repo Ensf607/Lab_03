@@ -72,11 +72,29 @@ public void decreaseQuantity(int id, int amount) {
 			temp.setQuantity(temp.getQuantity()-amount);
 			else
 				temp.setQuantity(0);
+		
 		}
 	
 }
 	if(check)
-System.err.println("ITEM Not Found");	
+System.err.println("Item Not Found");	
+}
+
+@Override
+public String toString() {
+	StringBuffer sb =new StringBuffer();
+	for (int i=0; i<toolList.size();i++) {
+		sb.append("Tool Number: "+(i+1)+"\n"+toolList.get(i).toString()+"\n");
+	}
+	return sb.toString();
+}
+public String checkQuantity() {
+	StringBuffer sb =new StringBuffer();
+	for (int i=0; i<toolList.size();i++) {
+		sb.append("Tool Number: "+(i+1)+"\n"+toolList.get(i).toString()+"Quantity: "+toolList.get(i).getQuantity()+"\n\n");
+	}
+	return sb.toString();
+	
 }
 
 }

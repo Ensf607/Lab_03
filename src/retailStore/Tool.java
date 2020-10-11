@@ -59,7 +59,12 @@ public class Tool {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return name+" "+quantity;
+		String s="Name: "+name+"\n";
+//		s+="ID: "+id+"\n";
+//		s+="Quantity: "+quantity+"\n";
+//		s+="price: "+price+"\n";
+//		
+		return s;
 	}
 
 

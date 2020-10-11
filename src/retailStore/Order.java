@@ -2,13 +2,15 @@ package retailStore;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 public class Order {
 private int id;
 private String date;
 private String[] orderInfo;
 public Order( String[] orderInfo) {
-	this.id= (int)Math.round(Math.random()*100000);
+	Random r=new Random();
+	this.id=r.nextInt(100000);
 	this.orderInfo=orderInfo;
 	Date today=Calendar.getInstance().getTime();
 	this.date=today.getDate()+"-"+(today.getMonth()+1)+"-"+(today.getYear()+1900);

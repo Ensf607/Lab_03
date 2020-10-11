@@ -2,9 +2,11 @@ package retailStore;
 
 import java.awt.image.BufferStrategy;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,17 +72,47 @@ public void addItemsToInventory(String fileName)  {
 	}
 	
 }
-
-	public String updateInventory() {
+	public void writeFile(String textOrder) {
+		try {
+			File file =new File ("Order.txt");
+			if(file.exists()) {
+				System.err.println("file exists-copying previous order and appending new order");
+				BufferedReader reader =new BufferedReader(new FileReader(file));
+				String line=reader.readLine();
+				String history = null;
+				while (line!=null) {
+					history+=line+"\n";
+					line=reader.readLine();
+				}
+			FileWriter fw =new FileWriter(file);
+			String updated =history +"/n"+textOrder;
+			fw.write(updated);
+			fw.close();
+			}
+			else {FileWriter fw =new FileWriter(file);
+			fw.write(textOrder);
+			fw.close();
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public void updateInventory() {
 		ArrayList<String[]>temp =inventory.checkStock();
+		String file=null;
 		if(temp.size()>0) {
 //		temp=inventory.checkStock();
-		String file=generateOrder(temp);
+		file=generateOrder(temp);
 		//either print or generat txt file
 //		System.err.println(file);
-		return file;}
-		return null;
-		
+		}
+		if (file!=null) {
+			System.err.println("Creating new order, check Order.text file");
+			writeFile(file);
+		}
 	}
 	public String searchByName(String name) {
 		return inventory.searchToolByName(name);
@@ -91,4 +123,13 @@ public void addItemsToInventory(String fileName)  {
 	public void decreaseQuantity(int id,int amount) {
 		inventory.decreaseQuantity( id, amount);
 	}
+
+	@Override
+	public String toString() {
+		return inventory.toString();
+	}
+	public String checkQuatity() {
+		return inventory.checkQuantity();
+	}
+	
 }
