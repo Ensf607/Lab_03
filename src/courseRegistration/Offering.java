@@ -64,7 +64,13 @@ public class Offering {
 	public String toString () {
 		String st = "";
 		
-		st += "Section Number: " + sectionNum + ", Section cap: " + sectionCap + "\n\n";
+		st += "Section Number: " + sectionNum + ", Section cap: " + sectionCap + "\n";
+		if(this.isOfferingStatus()) {
+			st+="This section can start, there are "+this.studentList.size()+" students\n";
+		}
+		else {
+			st+="This section cannot start, minimum number of student wasnt reached, there are "+this.studentList.size()+" students\n";
+		}
 		st += "Students in this section are:\n\n";
 			for (Registration r : studentList) {
 				///I need to get this from student list
@@ -79,6 +85,13 @@ public class Offering {
 	public void setOfferingStatus(boolean offeringStatus) {
 		this.offeringStatus = offeringStatus;
 	}
+//	public String offeringStatus() {
+//		if(offeringStatus) {
+//			return "Minimum number of students is readched in section: "+this.sectionNum+" can start, there is "+this.studentList.size()+" Students in this section";
+//		}
+//		else
+//			return "Minimum number of students was not reasched in section: "+this.sectionNum+" cannot start, there is "+this.studentList.size()+" Students in this section";
+//	}
 	public void removeStudent(String studentName, int studentId) {
 		for (int i=0;i<studentList.size();i++) {
 			Registration temp =studentList.get(i);

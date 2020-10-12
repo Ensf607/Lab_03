@@ -19,14 +19,20 @@ public class CourseCat {
 		ArrayList <Course> imaginaryDB = new ArrayList <Course> ();
 		
 		imaginaryDB.add(new Course ("ENGG", 233));
+		imaginaryDB.get(0).addPrereq(new Course("ENGG", 200));//manualy adding pre-req for course
 		imaginaryDB.add(new Course ("ENSF", 607));
+		imaginaryDB.get(1).addPrereq(new Course("ENGG", 600));//manualy adding pre-req for course
 		imaginaryDB.add(new Course ("ENGG", 201));
+		imaginaryDB.get(2).addPrereq(new Course("MATH", 30));//manualy adding pre-req for course
+		imaginaryDB.get(2).addPrereq(new Course("MATH", 31));//manualy adding pre-req for course
 		imaginaryDB.add(new Course ("MATH", 211));
+		imaginaryDB.get(3).addPrereq(new Course("MATH", 30));//manualy adding pre-req for course
+		imaginaryDB.get(3).addPrereq(new Course("MATH", 31));//manualy adding pre-req for course
 		imaginaryDB.add(new Course ("ENGG", 501));
+		imaginaryDB.get(4).addPrereq(new Course("ENGG", 200));//manualy adding pre-req for course
+		imaginaryDB.get(4).addPrereq(new Course("ENGG", 233));//manualy adding pre-req for course
 		imaginaryDB.add(new Course ("MATH", 367));
-		imaginaryDB.add(new Course ("CHEM", 209));
-		imaginaryDB.add(new Course ("ENGG", 201));
-		imaginaryDB.add(new Course ("ENGG", 311));
+		imaginaryDB.get(5).addPrereq(new Course("MATH", 211));//manualy adding pre-req for course
 		return imaginaryDB;
 	}
 	public ArrayList <Course> searchCat (String courseName) {
@@ -62,6 +68,23 @@ public class CourseCat {
 
 	public void setCourseList(ArrayList <Course> courseList) {
 		this.courseList = courseList;
+	}
+	public void printCat() {
+		StringBuffer sb=new StringBuffer();
+		sb.append("Courses available:\n\n");
+		for (int i=0;i<courseList.size();i++) {
+			sb.append((i+1)+"."+courseList.get(i).courseInfo()+"\n\n");
+		}
+		System.out.println(sb.toString());
+	}
+
+	@Override
+	public String toString() {
+		String s="Summary---\n\n";
+		for (int i=0;i<courseList.size();i++) {
+				s+=courseList.get(i).toString();	
+				}
+		return s;
 	}
 
 }

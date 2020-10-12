@@ -51,7 +51,19 @@ public class Course {
 	public void setOfferingList(ArrayList <Offering> offeringList) {
 		this.offeringList = offeringList;
 	}
-	
+	public void addPrereq(Course course) {
+		this.preReq.add(course);
+	}
+	public String courseInfo() {
+		String s="";
+		s += courseName + " " + courseNum;
+		s+="\nPre-requisits: ";
+		for(int i=0;i<preReq.size();i++) {
+			s+=preReq.get(i).courseName+"-"+preReq.get(i).courseNum+"  ";
+		}
+		return s;
+	} 
+
 	@Override
 	public String toString () {
 		String st = "";

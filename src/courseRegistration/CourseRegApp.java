@@ -42,15 +42,12 @@ public class CourseRegApp {
 			cat.createOffering(course6, 1, 200);
 			cat.createOffering(course6, 2, 150);
 		}
-		Course course7=cat.searchCat("MATH", 367);
-		if (course6 != null) {
-			cat.createOffering(course7, 1, 200);
-			cat.createOffering(course7, 2, 150);
-		}
+		
+		
 		boolean check =true;
 		System.out.println("Welcome!!");
 		
-		String menue="1-> Search catalogue courses\n2->Add a Student\n3-> Student List\n4-> Add course to Student\n5-> Remove course from student\n6-> View all courses in catalogue\n7-> View all courses taken by student\n8-> View course offering status( min 8 student)\n9-> Quit";
+		String menue="1-> Search catalogue courses\n2-> Add a Student\n3-> Student List\n4-> Add course to Student\n5-> Remove course from student\n6-> View all courses in catalogue\n7-> View all courses taken by student\n8-> View course offering status( min 8 student)\n9-> Quit";
 		Scanner scanner =new Scanner(System.in);
 		while(check) {
 			System.out.println("\nSelect an option from menue below\n"+menue);
@@ -58,7 +55,9 @@ public class CourseRegApp {
 			switch (ans) {
 			case 1:
 				//ToDo::
-				System.out.println("catalogue search method");
+				System.out.println("Please enter Class name and number");
+				Course course =cat.searchCat(scanner.next(), scanner.nextInt());
+				System.out.println(course);
 				
 				break;
 			case 2:
@@ -112,8 +111,7 @@ public class CourseRegApp {
 					System.err.println("Student Not Found!!");
 				break;
 			case 6:
-				//ToDo::
-				System.out.println("print all courses");
+				cat.printCat();
 				break;
 			case 7:
 				System.out.println("Please enter student name and ID");
@@ -133,7 +131,8 @@ public class CourseRegApp {
 					System.err.println("Student Not Found!!");
 				break;
 			case 8:
-				//ToDo print all offering status for courses
+			System.out.println(cat);
+			
 			break;
 			case 9:
 				
