@@ -7,7 +7,8 @@ public class Offering {
 	private int sectionNum;
 	private int sectionCap;
 	private Course theCourse;
-	
+	private boolean offeringStatus;
+	private boolean capReached;
 	private ArrayList <Registration> studentList;  //student list
 	
 	public Offering (int sectionNum, int sectionCap) {
@@ -18,8 +19,15 @@ public class Offering {
 	public void addRegistration (Registration reg) {
 		//We need to add logic to ensure the requirement for the 
 		//minimum number of students in a section is met.
-		studentList.add(reg);
+	if(studentList.size()<7) {
+		offeringStatus=false;		
+		
 	}
+	else {
+		offeringStatus=true;
+		}
+		studentList.add(reg);}
+	
 
 	public int getSectionNum() {
 		return sectionNum;
@@ -55,6 +63,7 @@ public class Offering {
 	@Override
 	public String toString () {
 		String st = "";
+		
 		st += "Section Number: " + sectionNum + ", Section cap: " + sectionCap + "\n\n";
 		st += "Students in this section are:\n\n";
 			for (Registration r : studentList) {
@@ -63,6 +72,19 @@ public class Offering {
 				st += "\n\n";
 			}
 		return st;
+	}
+	public boolean isOfferingStatus() {
+		return offeringStatus;
+	}
+	public void setOfferingStatus(boolean offeringStatus) {
+		this.offeringStatus = offeringStatus;
+	}
+	public void removeStudent(String studentName, int studentId) {
+		for (int i=0;i<studentList.size();i++) {
+			Registration temp =studentList.get(i);
+			if((temp.getTheStudent().getStudentName().equals(studentName) )&& (temp.getTheStudent().getStudentId()==studentId))
+				studentList.remove(i);
+		}
 	}
 	
 	

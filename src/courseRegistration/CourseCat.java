@@ -20,13 +20,23 @@ public class CourseCat {
 		
 		imaginaryDB.add(new Course ("ENGG", 233));
 		imaginaryDB.add(new Course ("ENSF", 607));
-		imaginaryDB.add(new Course ("PHYS", 259));
+		imaginaryDB.add(new Course ("ENGG", 201));
+		imaginaryDB.add(new Course ("MATH", 211));
+		imaginaryDB.add(new Course ("ENGG", 501));
+		imaginaryDB.add(new Course ("MATH", 367));
+		imaginaryDB.add(new Course ("CHEM", 209));
+		imaginaryDB.add(new Course ("ENGG", 201));
+		imaginaryDB.add(new Course ("ENGG", 311));
 		return imaginaryDB;
 	}
 	public ArrayList <Course> searchCat (String courseName) {
 		ArrayList <Course> foundCourses = new ArrayList <Course>();
 		//search for courses that their name matches courseName and add to the 
 		//foundCourses array
+		for(int i=0;i<courseList.size();i++) {
+			if(courseList.get(i).getCourseName().equals(courseName))
+				foundCourses.add(courseList.get(i));
+		}
 		
 		return foundCourses;
 	}

@@ -10,7 +10,7 @@ private String date;
 private String[] orderInfo;
 public Order( String[] orderInfo) {
 	Random r=new Random();
-	this.id=r.nextInt(100000);
+	this.id = 10000 + new Random().nextInt(90000);
 	this.orderInfo=orderInfo;
 	Date today=Calendar.getInstance().getTime();
 	this.date=today.getDate()+"-"+(today.getMonth()+1)+"-"+(today.getYear()+1900);

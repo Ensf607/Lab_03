@@ -1,4 +1,4 @@
-package courseRegistration;
+ package courseRegistration;
 
 import java.util.ArrayList;
 
@@ -18,10 +18,12 @@ public class Course {
 		//We are simply constructing an array
 		preReq = new ArrayList<Course>();
 		offeringList = new ArrayList <Offering>();
+		
 	}
 	//Adding a single offering to a course
 	public void addOffering (Offering theOffering) {
 		offeringList.add(theOffering);
+		theOffering.setTheCourse(this);
 		
 	}
 	
