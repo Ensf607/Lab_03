@@ -1,4 +1,4 @@
-Order ID:				15301
+nullnullnullOrder ID:				15301
 Date Ordered:				11-10-2020
 Item description:			Widgets
 Amount ordered:				40
@@ -73,5 +73,243 @@ Date Ordered:				11-10-2020
 Item description:			Tin Wits
 Amount ordered:				27
 Supplier:				Tic Tac Manufacturing
+****************************
+
+/nOrder ID:				66371
+Date Ordered:				12-10-2020
+Item description:			Widgets
+Amount ordered:				40
+Supplier:				Winork Manufacturing Inc.
+****************************
+
+Order ID:				44976
+Date Ordered:				12-10-2020
+Item description:			Grommets
+Amount ordered:				30
+Supplier:				Grommet Builders
+****************************
+
+Order ID:				70514
+Date Ordered:				12-10-2020
+Item description:			Wedges
+Amount ordered:				35
+Supplier:				Wings Works
+****************************
+
+Order ID:				13850
+Date Ordered:				12-10-2020
+Item description:			Wing Bats
+Amount ordered:				39
+Supplier:				Wiley Inc.
+****************************
+
+Order ID:				83852
+Date Ordered:				12-10-2020
+Item description:			Wiggles
+Amount ordered:				20
+Supplier:				Wings Works
+****************************
+
+Order ID:				34342
+Date Ordered:				12-10-2020
+Item description:			Bing Bobs
+Amount ordered:				25
+Supplier:				Grab Bag Inc.
+****************************
+
+Order ID:				93564
+Date Ordered:				12-10-2020
+Item description:			Barney Bits
+Amount ordered:				29
+Supplier:				Paddy's Manufacturing
+****************************
+
+Order ID:				95532
+Date Ordered:				12-10-2020
+Item description:			Barge Bogs
+Amount ordered:				15
+Supplier:				Biff Builders
+****************************
+
+Order ID:				77060
+Date Ordered:				12-10-2020
+Item description:			Iggy Orks
+Amount ordered:				28
+Supplier:				Irkle Industries
+****************************
+
+Order ID:				16972
+Date Ordered:				12-10-2020
+Item description:			Orf Dappers
+Amount ordered:				18
+Supplier:				Fiddleys Makes Stuff Inc.
+****************************
+
+Order ID:				28120
+Date Ordered:				12-10-2020
+Item description:			Tin Wits
+Amount ordered:				27
+Supplier:				Tic Tac Manufacturing
+****************************
+
+/nOrder ID:				64679
+Date Ordered:				12-10-2020
+Item description:			Widgets
+Amount ordered:				40
+Supplier:				Winork Manufacturing Inc.
+****************************
+
+Order ID:				19177
+Date Ordered:				12-10-2020
+Item description:			Grommets
+Amount ordered:				30
+Supplier:				Grommet Builders
+****************************
+
+Order ID:				53742
+Date Ordered:				12-10-2020
+Item description:			Wedges
+Amount ordered:				35
+Supplier:				Wings Works
+****************************
+
+Order ID:				90573
+Date Ordered:				12-10-2020
+Item description:			Wing Bats
+Amount ordered:				39
+Supplier:				Wiley Inc.
+****************************
+
+Order ID:				54082
+Date Ordered:				12-10-2020
+Item description:			Wiggles
+Amount ordered:				20
+Supplier:				Wings Works
+****************************
+
+Order ID:				47086
+Date Ordered:				12-10-2020
+Item description:			Bing Bobs
+Amount ordered:				25
+Supplier:				Grab Bag Inc.
+****************************
+
+Order ID:				86951
+Date Ordered:				12-10-2020
+Item description:			Barney Bits
+Amount ordered:				29
+Supplier:				Paddy's Manufacturing
+****************************
+
+Order ID:				23632
+Date Ordered:				12-10-2020
+Item description:			Barge Bogs
+Amount ordered:				15
+Supplier:				Biff Builders
+****************************
+
+Order ID:				20442
+Date Ordered:				12-10-2020
+Item description:			Iggy Orks
+Amount ordered:				28
+Supplier:				Irkle Industries
+****************************
+
+Order ID:				80059
+Date Ordered:				12-10-2020
+Item description:			Orf Dappers
+Amount ordered:				18
+Supplier:				Fiddleys Makes Stuff Inc.
+****************************
+
+Order ID:				60215
+Date Ordered:				12-10-2020
+Item description:			Tin Wits
+Amount ordered:				27
+Supplier:				Tic Tac Manufacturing
+****************************
+
+/nOrder ID:				64679
+Date Ordered:				12-10-2020
+Item description:			Widgets
+Amount ordered:				40
+Supplier:				Winork Manufacturing Inc.
+****************************
+
+Order ID:				19177
+Date Ordered:				12-10-2020
+Item description:			Grommets
+Amount ordered:				30
+Supplier:				Grommet Builders
+****************************
+
+Order ID:				53742
+Date Ordered:				12-10-2020
+Item description:			Wedges
+Amount ordered:				35
+Supplier:				Wings Works
+****************************
+
+Order ID:				90573
+Date Ordered:				12-10-2020
+Item description:			Wing Bats
+Amount ordered:				39
+Supplier:				Wiley Inc.
+****************************
+
+Order ID:				54082
+Date Ordered:				12-10-2020
+Item description:			Wiggles
+Amount ordered:				20
+Supplier:				Wings Works
+****************************
+
+Order ID:				47086
+Date Ordered:				12-10-2020
+Item description:			Bing Bobs
+Amount ordered:				25
+Supplier:				Grab Bag Inc.
+****************************
+
+Order ID:				86951
+Date Ordered:				12-10-2020
+Item description:			Barney Bits
+Amount ordered:				29
+Supplier:				Paddy's Manufacturing
+****************************
+
+Order ID:				23632
+Date Ordered:				12-10-2020
+Item description:			Barge Bogs
+Amount ordered:				15
+Supplier:				Biff Builders
+****************************
+
+Order ID:				20442
+Date Ordered:				12-10-2020
+Item description:			Iggy Orks
+Amount ordered:				28
+Supplier:				Irkle Industries
+****************************
+
+Order ID:				80059
+Date Ordered:				12-10-2020
+Item description:			Orf Dappers
+Amount ordered:				18
+Supplier:				Fiddleys Makes Stuff Inc.
+****************************
+
+Order ID:				60215
+Date Ordered:				12-10-2020
+Item description:			Tin Wits
+Amount ordered:				27
+Supplier:				Tic Tac Manufacturing
+****************************
+
+Order ID:				40053
+Date Ordered:				12-10-2020
+Item description:			Inny Outies
+Amount ordered:				50
+Supplier:				Irkle Industries
 ****************************
 

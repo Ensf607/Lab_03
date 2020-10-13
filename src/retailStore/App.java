@@ -1,9 +1,16 @@
 package retailStore;
 
 import java.util.Scanner;
-
+/**
+ * This is Front end app, its an interactive console-based menu and it uses {@link InventoryManager} class to communicate with Back end
+ * @author zchem
+ *
+ */
 public class App {
-
+/**
+ * This is the main method , where  the program should keep on running and keep presenting the menu until the user quits
+ * @param args
+ */
 	public static void main(String[] args) {
 		System.out.println("Welcome!!");
 		System.out.println("Updating inventory");

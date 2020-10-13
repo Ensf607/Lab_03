@@ -135,7 +135,7 @@ public class CourseRegApp {
 			
 			break;
 			case 9:
-				
+				System.out.println("Goodbye!!");
 				check=false;
 				break;
 			default:
@@ -143,15 +143,6 @@ public class CourseRegApp {
 			}
 			
 		}
-//		Student st1 = new Student ("Sara", 1);
-//		Student st2 = new Student ("Joe", 2);
-		
-	
-	
-//		System.out.println(myCourse.getOfferingList().get(1).isOfferingStatus());
-//		System.out.println(st1.coursesRegisteredTo());
-//		System.out.println(st1.getRegList().get(0).getTheOffering().getTheCourse());
-//		System.out.println(myCourse.getOfferingList().get(0).getStudentList().get(0).getTheStudent().getStudentName());
 	}
 
 }

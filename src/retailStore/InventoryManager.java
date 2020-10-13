@@ -11,10 +11,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
+/**
+ * This class reads the item.txt and supplier.txt and creates a {@link Inventory} class and many {@link Order} classes
+ * Note: The way this class is set up, it receives a string of all tools that should be ordered then create new {@link Order}
+ * @author zchem
+ *
+ */
 public class InventoryManager {
+	//privae variables 
 private HashMap <Integer,String> supplierList;
 private ArrayList<Order> orderList;
 private Inventory inventory;
+/**
+ * Constructor where the {@link Inventory} class is initiated, add two methods are invoked
+ * First method: {@link #addSupplierList(String)} which reads supplier.txt and store it in Hasshmap {@value #supplierList}
+ * Second method: {@link #addItemsToInventory(String)} reads items.txt and adds tools to {@link Inventory}
+ * @param supplierFile file name of supplier.txt
+ * @param itemFile file name of item.txt
+ */ 
 public InventoryManager(String supplierFile,String itemFile) {
 	supplierList=new HashMap<Integer, String>();
 	orderList=new ArrayList<Order>();
@@ -22,7 +37,11 @@ public InventoryManager(String supplierFile,String itemFile) {
 	inventory =new Inventory(supplierList);
 	addItemsToInventory(itemFile);
 }
-
+/**
+ * This method traverse through @param lis and creates a new {@link Order} and store it in local variable {@value #orderList}}
+ * @param lis contains a list of tools to be ordered 
+ * @return combined string of all the orders 
+ */
 public String generateOrder(ArrayList<String[]> lis) {
 	for(int i=0;i<lis.size();i++) {
 		orderList.add(new Order(lis.get(i)));
@@ -33,7 +52,11 @@ public String generateOrder(ArrayList<String[]> lis) {
 	}
 	return sb.toString();
 }
-
+/**
+ * This method reads the supplier.txt and stores the id and supplier name in hashmap. 
+ * Note: there wasnt a need to store the other info of the suppplier.txt
+ * @param fileName
+ */
 public void addSupplierList(String fileName) {
 	try {
 		BufferedReader reader=new BufferedReader(new FileReader(fileName));
@@ -54,6 +77,10 @@ public void addSupplierList(String fileName) {
 	}
 	
 }
+/**
+ * This method reads the item.txt and creates a new tool in {@link Inventory} for each line in items.txt
+ * @param fileName
+ */
 public void addItemsToInventory(String fileName)  {
 	
 	try {
@@ -72,6 +99,11 @@ public void addItemsToInventory(String fileName)  {
 	}
 	
 }
+/**
+ * This method writes the return of {@link #generateOrder(ArrayList)} into a txt file.
+ * checks if file exists or not, if file exists then merge previous and new orders
+ * @param textOrder All the orders for today in a string 
+ */
 	public void writeFile(String textOrder) {
 		try {
 			File file =new File ("Order.txt");
@@ -100,26 +132,43 @@ public void addItemsToInventory(String fileName)  {
 		}
 		
 	}
+	/**
+	 * This method invoke {@link Inventory#checkStock()} which traverses through all the tools and 
+	 * orders new tools that has quantity below 40
+	 */
 	public void updateInventory() {
 		ArrayList<String[]>temp =inventory.checkStock();
 		String file=null;
 		if(temp.size()>0) {
-//		temp=inventory.checkStock();
 		file=generateOrder(temp);
-		//either print or generat txt file
-//		System.err.println(file);
 		}
 		if (file!=null) {
 			System.err.println("Creating new order, check Order.text file");
 			writeFile(file);
 		}
 	}
+	/**
+	 * This method invokes {@link Inventory #searchToolByName(String)} which searches tool by name
+	 * @param name passed from Front end
+	 * @return the tool as a String 
+	 */
 	public String searchByName(String name) {
 		return inventory.searchToolByName(name);
 	}
+	/**
+	 * This method invokes {@link Inventory#searchToolByID(int)} which searches tool by ID
+	 * @param id passed from Front end
+	 * @return the tool in a string
+	 */
 	public String searchByID(int id) {
 		return inventory.searchToolByID(id);
 	}
+	/**
+	 * This method invokes {@link Inventory #decreaseQuantity(int, int)} which decreases the quatity of a tool by 
+	 * amount specified by user. Note, if decreased amount > actual amount then set the quatity to 0
+	 * @param id of the tool to decrease
+	 * @param amount to decrease
+	 */
 	public void decreaseQuantity(int id,int amount) {
 		inventory.decreaseQuantity( id, amount);
 	}
@@ -128,6 +177,10 @@ public void addItemsToInventory(String fileName)  {
 	public String toString() {
 		return inventory.toString();
 	}
+	/**
+	 * This method invokes {@link Inventory #checkQuantity()} which returns the quantities for each tool
+	 * @return
+	 */
 	public String checkQuatity() {
 		return inventory.checkQuantity();
 	}
